@@ -4,96 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <!--css de bosstrap-->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <!--Css-->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <!--Encabezado del sitio-->
-    <header>
-      <!--Menú de navegación-->
-      <nav>
-        <!--Logo-->
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
           <img src="../medios/logo.png" alt="Logo de la empresa" class="logo" />
         </div>
-        <!--Lista desordenada en la barra de navegación-->
-        <ul>
-          <!--Los siguientes son enlaces relativos de nuestra pagina web-->
-          <li><a href="./Index.html">Inicio</a></li>
-          <li><a href="./pages/nosotros.html">Nosotros</a></li>
-          <li><a href="./pages/productos.html">Productos</a></li>
-          <li><a href="./pages/contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item"><a href="./Index.html" class="nav-link text-white">Inicio</a></li>
+            <li class="nav-item"><a href="./pages/nosotros.html" class="nav-link text-white">Nosotros</a></li>
+            <li class="nav-item"><a href="./pages/productos.html" class="nav-link text-white">Productos</a></li>
+            <li class="nav-item"><a href="./pages/contacto.html" class="nav-link text-white">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <!--Principal-->
+
+    <!-- Main Content -->
     <main>
-      <section class="banner">
-        <h1 class="titulos">Mates</h1>
-      </section>
-      
-      </section>
-      <section>
-        <div>
-          <!--Subtitulo-->
-          <h2 class="subtitulo">Bienvenido a Mateandoando</h2>
-        </div>
-        <!--Contenedor-->
-        <div>
-          <!--Párrafo-->
-          <p>Presentamos nuestra página web sobre la venta de nuestros Mates</p>
-        </div>
-      </section>
-      <section>
-        <p>
-          Descubre la tradición en cada sorbo con nuestros mates artesanales,
-          hechos con materiales de primera calidad que combinan estilo y
-          durabilidad. Ya sea que prefieras el clásico mate de calabaza con
-          detalles únicos o un moderno diseño en acero inoxidable, tenemos la
-          opción perfecta para acompañar tus momentos de relax o compartir con
-          amigos. ¡Eleva tu experiencia con yerba mate a otro nivel y haz tuyo
-          el ritual argentino más auténtico hoy mismo!
-        </p>
-      </section>
-      <section>
-        <h3>Video presentacion de uno de nuestros productos</h3>
-        <!--Video-->
-        <video src="./medios/Videopresentacion.mp4"></video>
-        <p>
-          ¿Viste ese momento en el que alguien se ríe mientras toma mate y todo
-          se siente más liviano? Ese instante simple, pero lleno de vida, es el
-          que queremos que vivas con nuestros mates. Porque no es solo una
-          bombilla y una calabaza… es una pausa, una charla, una carcajada que
-          sale sin querer. Nuestros mates están pensados para eso: para que cada
-          sorbo sea un mimo, y cada ronda, un motivo para compartir. Hechos con
-          amor, pensados para durar y diseñados para acompañarte en esos
-          momentos en los que te das cuenta de que lo simple, es lo más lindo.
-          ¿Te sumás al ritual?
-        </p>
+      <!-- Hero Section -->
+      <section class="banner text-center text-white d-flex align-items-center justify-content-center" style="height: 400px; background-image: url('../medios/fondomate.jpg'); background-size: cover; background-position: center;">
+        <h1 class="display-4">Bienvenido a Mateandoando</h1>
       </section>
 
-      <section>
-        <div>
-          <p>Aquí les dejamos unas imagenes de nuestros productos y más</p>
-          <!--Imagen sobre nuestros productos-->
-          <img
-            src="../coder/medios/mate.png"
-            alt="Imagen de uno de nuestros productos"
-          />
+      <!-- About Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Descubre la Tradición del Mate</h2>
+        <p class="text-center">
+          Descubre la tradición en cada sorbo con nuestros mates artesanales, hechos con materiales de primera calidad que combinan estilo y durabilidad.
+        </p>
+        <div class="text-center mt-4">
+          <a href="./pages/productos.html" class="btn btn-primary btn-lg">Explorar Productos</a>
         </div>
       </section>
+
+      <!-- Featured Products Carousel -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Productos Destacados</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../medios/mates 1.png" class="d-block w-100" alt="Mate de acero">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mate de Acero</h5>
+                <p>Resistente y duradero.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../medios/mates 3.png" class="d-block w-100" alt="Mate de calabaza">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mate de Calabaza</h5>
+                <p>Tradicional y elegante.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Video Presentación</h2>
+        <div class="ratio ratio-16x9">
+          <video src="./medios/Videopresentacion.mp4" controls></video>
+        </div>
+        <p class="text-center mt-3">
+          Vive la experiencia del mate con nuestros productos únicos.
+        </p>
+      </section>
     </main>
-    <!--Pie de página (la parte de abajo)-->
-    <footer>
-      <!--Redes sociales-->
-      <div>
-        <p>
-          Nuestro mail de contacto:
-          <a href="mailto:mateando@gmail.com" target="_blank"
-            >mateando@gmail.com</a
-          >
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>Contacto: <a href="mailto:mateando@gmail.com" class="text-white">mateando@gmail.com</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
         </p>
       </div>
     </footer>
