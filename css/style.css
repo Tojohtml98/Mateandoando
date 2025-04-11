@@ -1,0 +1,156 @@
+/*reset css*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+ 
+/*fontfamily:oswald de google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+.html {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px; /* Tamaño base de la fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+} 
+/*comentario de css*/
+/*
+#3D8D7A
+#B3D8A8
+#FBFFE4
+#A3D1C6
+*/
+
+/*nav*/
+nav {
+  background-color: #3d8d7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+} 
+/*generales*/
+h1 {
+  text-align: center;
+}
+.titulos {
+  color: black;
+  text-decoration: underline;
+  font-size: 30px; /* absoluta*/
+  font-family: "Oswald", sans-serif; /*Font family extraida de google fonts*/
+}
+
+p {
+  color: #3d8d7a;
+  /*nombre de color en hexadecimal*/
+  font-size: 1.5em; /*relativo al tamaño del elemento padre*/
+  /*unidaddes de medida en px*/
+  margin: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body {
+  background-color: #fbffe4;
+}
+
+/*header*/
+header {
+  background-color: #3d8d7a;
+}
+
+.logo {
+  width: 60px;
+}
+
+ul {
+  list-style: none;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+/*main index*/
+.banner {
+  background-image: url(../medios/fondomate.jpg);
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+.banner {
+  height: 300px;
+  padding-bottom: 0%;
+  color: white;
+}
+
+    
+/*index*/
+.subtitulo {
+  text-align: center;
+  color: #a3d1c6;
+  font-size: 2, 5rem;
+  text-decoration: underline;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/*productos*/ 
+.contenedor-productos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Por si la pantalla es más chica, se acomodan */
+}
+
+.producto {
+  width: 22%; /* Cuatro por fila con espacio entre ellas */
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: #3d8d7a;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.precio {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+
+.caja:hover {
+  transform: scale(1.05);
+  background-color: #a3d1c6;
+}
+.caja a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.caja a:hover {
+  color: #3d8d7a;
+  text-decoration: underline;
+}
+
+/*footer*/              
