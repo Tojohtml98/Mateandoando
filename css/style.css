@@ -181,4 +181,49 @@ table thead th {
   font-size: 1.1rem; /* Tamaño de fuente */
 }
 
+/* Estilo para la tabla de productos */
+
+.table th {
+  background-color: #3d8d7a; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar el texto */
+  border-radius: 5px; /* Bordes redondeados */
+}
+table th {
+  padding: 10px; /* Espaciado interno */
+  font-size: 1.1rem; /* Tamaño de fuente */
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Colapsar bordes */
+  margin-top: 20px; /* Espacio superior */
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #a3d1c6;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background-color: #fbffe4; /* Color de fondo alternativo */
+}
+table tr:nth-child(odd) {
+  background-color: #a3d1c6; /* Color de fondo alternativo */
+}
+table {
+  border: 1px solid #a3d1c6;
+}
+table tr:hover {
+  background-color: #d1e7dd;
+}
+/* Estilo para el formulario de contacto */
+form {
+  background-color: #fbffe4; /* Fondo claro */
+  border: 1px solid #a3d1c6; /* Borde con color suave */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
 /*footer*/
