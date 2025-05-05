@@ -15,15 +15,32 @@
 /* Color claro */
 /* Color oscuro */
 /* Color blanco */
-/* Importar mixins */
 /* Importar mixins para reutilización */
-/* Importar extensiones */
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Importar extensiones para reutilización */
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Importar animaciones para reutilización */
 /* Importar otros estilos */
 /* Títulos generales */
 h1,
 h2 {
   color: #3d8d7a;
+  animation: slide-up 1s ease-out;
   font-family: "Oswald", sans-serif;
   text-align: center;
   margin-bottom: 20px;

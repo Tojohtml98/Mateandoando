@@ -10,11 +10,9 @@
 
 /* Importar las variables primero */
 @import './partials/variables.scss';
-/* Importar mixins */
 @import './partials/mixin.scss'; /* Importar mixins para reutilización */
-/* Importar extensiones */
 @import './partials/extend.scss'; /* Importar extensiones para reutilización */
-
+@import './partials/animacion.scss'; /* Importar animaciones para reutilización */
 /* Importar otros estilos */
 @import './partials/titulos.scss'; /* Importar estilos de títulos */
 @import './partials/banner.scss'; /* Importar estilos de banner */

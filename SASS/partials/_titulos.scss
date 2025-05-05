@@ -1,7 +1,9 @@
 /* Títulos generales */
 h1,
 h2 {
+  @extend %title-base;
   color: $primary-color;
+  animation: slide-up 1s ease-out;
   font-family: 'Oswald', sans-serif;
   text-align: center;
   margin-bottom: 20px;
