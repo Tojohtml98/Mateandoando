@@ -4,14 +4,14 @@
   padding: 0%;
   box-sizing: border-box;
 }
- 
+
 /*fontfamily:oswald de google fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
 .html {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 16px; /* Tamaño base de la fuente */
   line-height: 1.5; /* Espaciado entre líneas */
-} 
+}
 /*comentario de css*/
 /*
 #3D8D7A
@@ -19,24 +19,12 @@
 #FBFFE4
 #A3D1C6
 */
-
-/*nav*/
-nav {
-  background-color: #3d8d7a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-} 
+/*colores de la paleta*/
 /*generales*/
-h1, h2 {
+h1,
+h2 {
   color: #3d8d7a;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -45,7 +33,7 @@ h1, h2 {
   color: black;
   text-decoration: underline;
   font-size: 30px; /* absoluta*/
-  font-family: "Oswald", sans-serif; /*Font family extraida de google fonts*/
+  font-family: 'Oswald', sans-serif; /*Font family extraida de google fonts*/
 }
 
 p {
@@ -95,7 +83,6 @@ header a {
   color: white;
 }
 
-    
 /*index*/
 .subtitulo {
   text-align: center;
@@ -104,7 +91,8 @@ header a {
   text-decoration: underline;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }

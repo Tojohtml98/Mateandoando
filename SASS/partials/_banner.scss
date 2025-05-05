@@ -1,0 +1,15 @@
+/* Banner principal */
+.banner {
+  background-image: url('../medios/fondomate.jpg');
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: white;
+
+  &.small {
+    height: 300px;
+    padding-bottom: 0;
+  }
+}

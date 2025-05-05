@@ -1,0 +1,31 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+
+/* Importar las variables primero */
+@import './partials/variables.scss';
+
+/* Importar otros estilos */
+@import './partials/titulos.scss'; /* Importar estilos de títulos */
+@import './partials/banner.scss'; /* Importar estilos de banner */
+@import './partials/header.scss'; /* Importar estilos de header */
+
+/* Estilo general del HTML */
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; /* Tamaño base de la fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Estilo del body */
+body {
+  background-color: $light-color; /* Fondo claro */
+  margin: 0;
+  padding: 0;
+}

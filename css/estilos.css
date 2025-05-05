@@ -1,3 +1,83 @@
+@charset "UTF-8";
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Importar fuentes de Google Fonts */
+/* Importar las variables primero */
+/* Variables de colores */
+/* Color principal */
+/* Color secundario */
+/* Color claro */
+/* Color oscuro */
+/* Color blanco */
+/* Importar otros estilos */
+/* Títulos generales */
+h1,
+h2 {
+  color: #3d8d7a;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulos {
+  color: black;
+  text-decoration: underline;
+  font-size: 30px; /* Tamaño absoluto */
+  font-family: "Oswald", sans-serif;
+}
+
+/* Importar estilos de títulos */
+/* Banner principal */
+.banner {
+  background-image: url("../medios/fondomate.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+.banner.small {
+  height: 300px;
+  padding-bottom: 0;
+}
+
+/* Importar estilos de banner */
+/* Header */
+header {
+  background-color: #3d8d7a;
+}
+header .logo {
+  width: 60px;
+}
+header ul {
+  list-style: none;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Importar estilos de header */
+/* Estilo general del HTML */
+html {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px; /* Tamaño base de la fuente */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Estilo del body */
+body {
+  background-color: #f0f0f0; /* Fondo claro */
+  margin: 0;
+  padding: 0;
+}
 
 /*# sourceMappingURL=estilos.css.map */
