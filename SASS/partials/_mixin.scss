@@ -1,0 +1,19 @@
+// Mixin para centrar elementos flexiblemente
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para texto responsivo
+@mixin responsive-text($size) {
+  font-size: $size;
+  @media (max-width: 768px) {
+    font-size: $size * 0.8;
+  }
+}
+
+// Mixin para sombras
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}

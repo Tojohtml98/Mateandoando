@@ -1,0 +1,16 @@
+// Clase base para botones
+%button-base {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+// Clase base para títulos
+%title-base {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
