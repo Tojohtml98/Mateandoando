@@ -1,6 +1,8 @@
+@import "../partials/variables.scss";
 /* Banner principal */
 .banner {
-  background-image: url('../medios/fondomate.jpg');
+  background-image: url('../MEDIOS/banner.jpg');
+  background-color: $dark-color; /* Color de fondo oscuro */
   height: 500px;
   background-size: cover;
   background-repeat: no-repeat;

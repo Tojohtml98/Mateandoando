@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/estilos.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="bg-dark text-white py-3">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
-          <img src="../MEDIOS/logo.png" alt="Logo de la empresa" class="logo" />
+          <img src="./MEDIOS/logo.png" alt="Logo de la empresa" class="logo" />
         </div>
         <nav>
           <ul class="nav">
-            <li class="nav-item"><a href="./index.html" class="nav-link text-white">Inicio</a></li>
-            <li class="nav-item"><a href="./pages/nosotros.html" class="nav-link text-white">Nosotros</a></li>
-            <li class="nav-item"><a href="./pages/productos.html" class="nav-link text-white">Productos</a></li>
-            <li class="nav-item"><a href="./pages/contacto.html" class="nav-link text-white">Contacto</a></li>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link text-white">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="./PAGES/nosotros.html" class="nav-link text-white">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="./PAGES/productos.html" class="nav-link text-white">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a href="./PAGES/contacto.html" class="nav-link text-white">Contacto</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -30,16 +43,20 @@
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
-      <section class="banner text-center text-white d-flex align-items-center justify-content-center" 
-        style="height: 400px; 
-               background: url('./MEDIOS/fondomate.png') no-repeat;
-               background-color: #343a40; 
-               background-size: cover; 
-               background-position: center;">
+      <section
+        class="banner text-center text-white d-flex align-items-center justify-content-center"
+        style="
+          height: 400px;
+          background: url('./MEDIOS/fondomate.png') no-repeat;
+          background-color: #343a40;
+          background-size: cover;
+          background-position: center;
+        "
+      >
         <div>
           <h1 class="display-4">Bienvenido a Mateandoando</h1>
           <p class="lead">Descubre la tradición del mate en cada sorbo</p>
-          <a href="./pages/productos.html" class="btn btn-primary btn-lg mt-3">Explorar Productos</a>
+          <a href="./PAGES/productos.html" class="btn btn-primary btn-lg mt-3">Explorar Productos</a>
         </div>
       </section>
 
@@ -47,10 +64,13 @@
       <section class="container my-5">
         <h2 class="text-center mb-4">¿Quiénes Somos?</h2>
         <p class="text-center">
-          En <strong>Mateandoando</strong>, combinamos tradición y diseño para ofrecerte los mejores productos materos. Desde mates artesanales hasta accesorios modernos, todo está pensado para acompañarte en tus momentos especiales.
+          En <strong>Mateandoando</strong>, combinamos tradición y diseño para
+          ofrecerte los mejores productos materos. Desde mates artesanales hasta
+          accesorios modernos, todo está pensado para acompañarte en tus
+          momentos especiales.
         </p>
         <div class="text-center mt-4">
-          <a href="./pages/nosotros.html" class="btn btn-outline-success btn-lg">Conoce Más</a>
+          <a href="./PAGES/nosotros.html" class="btn btn-outline-success btn-lg">Conoce Más</a>
         </div>
       </section>
 
@@ -60,19 +80,29 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./MEDIOS/mates 1.png" class="d-block w-100" alt="Mate de acero">
+              <img
+                src="./MEDIOS/mates 1.png"
+                class="d-block w-100"
+                alt="Mate de acero"
+              />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Mate de Acero</h5>
                 <p>Resistente y duradero.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Video Section -->
       <section class="container my-5">
         <h2 class="text-center mb-4">Video Presentación</h2>
         <p class="text-center">
-          Descubre cómo nuestros productos pueden transformar tus momentos materos.
+          Descubre cómo nuestros productos pueden transformar tus momentos
+          materos.
         </p>
         <div class="ratio ratio-16x9">
-          <video src="./medios/Videopresentacion.mp4" controls></video>
+          <video src="./MEDIOS/Videopresentacion.mp4" controls></video>
         </div>
       </section>
     </main>
@@ -80,7 +110,10 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
       <div class="container">
-        <p>Contacto: <a href="mailto:mateando@gmail.com" class="text-white">mateando@gmail.com</a></p>
+        <p>
+          Contacto:
+          <a href="mailto:mateando@gmail.com" class="text-white">mateando@gmail.com</a>
+        </p>
         <p>Síguenos en nuestras redes sociales:</p>
         <div>
           <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i> Facebook</a>
@@ -91,6 +124,10 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

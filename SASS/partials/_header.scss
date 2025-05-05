@@ -1,3 +1,4 @@
+@import "../partials/variables.scss";
 /* Header */
 header {
   background-color: $primary-color;
@@ -14,5 +15,17 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+  }
+}
+/* Header responsive */
+@media (max-width: 768px) {
+  header {
+    .logo {
+      width: 40px;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
   }
 }

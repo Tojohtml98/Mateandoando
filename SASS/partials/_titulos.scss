@@ -1,5 +1,12 @@
 /* Títulos generales */
-h1,
+h1 {
+  animation: slide-up 1s ease-out;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
 h2 {
   @extend %title-base;
   color: $primary-color;
@@ -13,5 +20,17 @@ h2 {
   color: black;
   text-decoration: underline;
   font-size: 30px; /* Tamaño absoluto */
+  font-family: 'Oswald', sans-serif;
+}
+.titulos2 {
+  color: black;
+  text-decoration: underline;
+  font-size: 20px; /* Tamaño absoluto */
+  font-family: 'Oswald', sans-serif;
+}
+.titulos3 {
+  color: black;
+  text-decoration: underline;
+  font-size: 15px; /* Tamaño absoluto */
   font-family: 'Oswald', sans-serif;
 }
