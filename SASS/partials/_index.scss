@@ -1,0 +1,142 @@
+/* Estilos para el banner */
+.banner {
+  height: 400px;
+  background: url('../medios/fondomate.png') no-repeat;
+  background-color: #343a40;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor visibilidad */
+  }
+  .btn-primary {
+    margin-top: 20px;
+    background-color: #3d8d7a;
+    border-color: #3d8d7a;
+
+    &:hover {
+      background-color: #2c6d5e;
+      border-color: #2c6d5e;
+    }
+  }
+}
+
+/* Estilos para la sección "¿Quiénes Somos?" */
+.about-section {
+  margin: 50px 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #3d8d7a; /* Color principal para destacar */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px; /* Añadir margen inferior para separación */
+  }
+
+  .btn-outline-success {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: #3d8d7a;
+      color: white;
+      border-color: #3d8d7a;
+    }
+  }
+}
+
+/* Estilos para el carrusel de productos */
+.carousel-inner {
+  .carousel-item {
+    img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+
+      h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Estilos para la sección de video */
+.video-section {
+  margin: 50px 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #3d8d7a; /* Color principal para destacar */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .ratio {
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+
+  a {
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social-links {
+    margin-top: 10px;
+
+    a {
+      margin-right: 15px;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: #3d8d7a;
+      }
+    }
+  }
+}

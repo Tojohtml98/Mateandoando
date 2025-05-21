@@ -4,107 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Bienvenido a Mateando, tu tienda de productos materos." />
-    <meta name="keywords" content="Escribinos por nuestro contacto directo, hacé tu pedido con nuestro contacto online, y resolvé tus dudas fácilmente a través de nuestro contacto." />
-    <title>Contacto</title>
+    <meta name="keywords"
+      content="Escribinos por nuestro contacto directo, hacé tu pedido con nuestro contacto online, y resolvé tus dudas fácilmente a través de nuestro contacto." />
+    <title>Contacto - Mateandoando</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/estilos.css" />
   </head>
-  <!--css de bosstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <!--Css-->
-  <link rel="stylesheet" href="../css/estilos.css" />
   <body>
-    <!--Encabezado del sitio-->
-     <!-- Header -->
+    <!-- Encabezado del sitio -->
     <header class="bg-dark text-white py-3">
       <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
-          <img src="../medios/logo.png" alt="Logo de la empresa" class="logo" />
+          <img src="../medios/logo.png" alt="Logo de Mateandoando, tienda de productos materos" class="logo" />
         </div>
         <nav>
           <ul class="nav">
-            <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
-            <li class="nav-item"><a href="./nosotros.html" class="nav-link text-white">Nosotros</a></li>
-            <li class="nav-item"><a href="./productos.html" class="nav-link text-white">Productos</a></li>
-            <li class="nav-item"><a href="./contacto.html" class="nav-link text-white">Contacto</a></li>
+            <li class="nav-item me-4">
+              <a href="../index.html" class="nav-link text-white">Inicio</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="./nosotros.html" class="nav-link text-white">Nosotros</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="./productos.html" class="nav-link text-white">Productos</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="./contacto.html" class="nav-link text-white">Contacto</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-<!-- Contáctanos -->
-<section class="container my-5" id="contacto">
-  <h1 class="text-center mb-5">Contáctanos</h1>
-  <div class="row">
-    <!-- Formulario -->
-    <div class="col-md-6">
-      <form>
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
+      <!-- Contáctanos -->
+      <section class="container my-5" id="contacto">
+        <h1 class="text-center mb-5">Contáctanos</h1>
+        <div class="row">
+          <!-- Formulario -->
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+                </div>
 
-    <!-- Información de contacto -->
-    <div class="col-md-6">
-      <ul class="list-unstyled">
-        <li class="mb-3">
-          <i class="bi bi-geo-alt-fill me-2"></i>
-          Azul, Buenos Aires, Argentina
-        </li>
-        <li class="mb-3">
-          <i class="bi bi-envelope-fill me-2"></i>
-          mateandoando@gmail.com
-        </li>
-        <li class="mb-3">
-          <i class="bi bi-telephone-fill me-2"></i>
-          +54 9 2281 453789
-        </li>
-      </ul>
-      <h5>Redes sociales</h5>
-      <a href="https://facebook.com" class="me-3" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
-      <a href="https://instagram.com" class="me-3" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
-      <a href="https://wa.me/5491234567890" target="_blank"><i class="bi bi-whatsapp fs-3 text-success"></i></a>
-    </div>
-  </div>
+          <!-- Información de contacto -->
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Azul, Buenos Aires, Argentina
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-envelope-fill me-2"></i>
+                mateandoando@gmail.com
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-telephone-fill me-2"></i>
+                +54 9 2281 453789
+              </li>
+            </ul>
+            <h5>Redes sociales</h5>
+            <p>Síguenos en nuestras redes sociales para más novedades:</p>
+            <a href="https://facebook.com/mateandoando" class="me-3" target="_blank" title="Visítanos en Facebook"><i
+                class="bi bi-facebook fs-3"></i> Facebook</a>
+            <a href="https://instagram.com/mateandoando" class="me-3" target="_blank" title="Síguenos en Instagram"><i
+                class="bi bi-instagram fs-3"></i> Instagram</a>
+            <a href="https://wa.me/5492281453789" target="_blank" title="Contáctanos por WhatsApp"><i
+                class="bi bi-whatsapp fs-3 text-success"></i> WhatsApp</a>
+            </div>
+            </div>
 
-  <!-- Mapa -->
-  <div class="row mt-5">
-    <div class="col-12">
-      <h5 class="mb-3">Ubicación</h5>
-      <div class="ratio ratio-16x9">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.130162906952!2d-59.85973232420183!3d-36.777001972291956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95945b60178a1605%3A0x87f8e5157e8c5d10!2sAzul%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1712840000000" 
-          width="600" 
-          height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <!-- Mapa -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <h5 class="mb-3">Ubicación</h5>
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.130162906952!2d-59.85973232420183!3d-36.777001972291956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95945b60178a1605%3A0x87f8e5157e8c5d10!2sAzul%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1712840000000"
+                width="600" height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center mt-4">
+        <a href="../index.html" class="btn btn-outline-success">Volver a Home</a>
       </div>
-    </div>
-  </div>
-</section>
-<div class="text-center mt-4">
-  <a href="../index.html" class="btn btn-outline-success">Volver a Home</a>
-</div>
-<!-- Footer -->
-<footer class="bg-dark text-white py-3">
-  <div class="container text-center">
-    <p>&copy; 2025 Mi Empresa. Todos los derechos reservados.</p>
-  </div>
-</footer>
-    <!--Scripts de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB+8e3f5a
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+      <div class="container text-center">
+        <p>&copy; 2025 Mateandoando. Todos los derechos reservados.</p>
+        </div>
+        </footer>
+<!-- Scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
