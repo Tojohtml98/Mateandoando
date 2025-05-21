@@ -1,0 +1,24 @@
+.img-reducida {
+  max-width: 60%; /* Reduce el ancho máximo al 60% del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0 auto; /* Centra la imagen */
+  border-radius: 10px; /* Bordes redondeados para un diseño más moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el mouse */
+
+  &:hover {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse */
+  }
+
+  /* Estilos para tablets */
+  @media (max-width: 768px) {
+    max-width: 80%; /* Reduce el ancho máximo al 80% para tablets */
+  }
+
+  /* Estilos para celulares */
+  @media (max-width: 576px) {
+    max-width: 90%; /* Reduce el ancho máximo al 90% para celulares */
+    border-radius: 5px; /* Bordes más pequeños para pantallas pequeñas */
+  }
+}
