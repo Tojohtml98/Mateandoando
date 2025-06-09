@@ -410,3 +410,14 @@ body {
 }
 
 /*# sourceMappingURL=estilos.css.map */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,15 +1,16 @@
 // Mixin para centrar elementos flexiblemente
-@mixin center-flex {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 // Mixin para texto responsivo
-@mixin responsive-text($size) {
+@mixin responsive-font($size) {
   font-size: $size;
+
   @media (max-width: 768px) {
-    font-size: $size * 0.8;
+    font-size: calc($size - 2px);
   }
 }
 
