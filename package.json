@@ -4,12 +4,11 @@
   "description": "Sitio web de Mateandoando - Tienda de productos de mate",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run sass:watch",
-    "sass": "node sass.config.js",
-    "sass:watch": "nodemon --watch SASS --ext scss --exec \"npm run sass\"",
-    "build": "npm run sass",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --port=3000 --open=./index.html"
+    "dev": "sass --watch SASS/estilos.scss css/estilos.css --style=compressed",
+    "build": "sass SASS/estilos.scss css/estilos.css --style=compressed",
+    "start": "live-server --port=3000 --open=./index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ."
   },
   "keywords": [
     "mate",
@@ -26,23 +25,9 @@
     "bootstrap-icons": "^1.10.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "browser-sync": "^2.29.3",
-    "cssnano": "^6.0.1",
-    "fibers": "^5.0.3",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.66.1",
     "live-server": "^1.2.2",
-    "nodemon": "^3.0.1",
-    "postcss": "^8.4.25",
-    "sass": "^1.64.1"
+    "gh-pages": "^5.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "homepage": "https://tojohtml98.github.io/Mateandoando/"
 }
