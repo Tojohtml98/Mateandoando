@@ -1,46 +1,107 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// 1. Incluir Bootstrap
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
 
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+// 2. Incluir variables personalizadas
+@import './partials/variables';
 
-/* Importar las variables primero */
-@import './partials/variables.scss';
-@import './partials/mixin.scss'; /* Importar mixins para reutilización */
-@import './partials/extend.scss'; /* Importar extensiones para reutilización */
-@import './partials/animacion.scss'; /* Importar animaciones para reutilización */
-/* Importar otros estilos */
-@import './partials/titulos.scss'; /* Importar estilos de títulos */
-@import './partials/banner.scss'; /* Importar estilos de banner */
-@import './partials/header.scss'; /* Importar estilos de header */
-@import './partials/productos.scss'; /* Importar estilos de productos */
-@import './partials/index.scss'; /* Importar estilos de footer */
-@import './partials/_imagen.scss';
+// 3. Configuración de Bootstrap
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-rounded: true;
+$enable-transitions: true;
 
-/* Estilo general del HTML */
-html {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px; /* Tamaño base de la fuente */
-  line-height: 1.5; /* Espaciado entre líneas */
-}
+// 4. Importar componentes de Bootstrap
+@import 'bootstrap/scss/bootstrap';
 
-/* Estilo del body */
+// 5. Importar fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+// 6. Importar componentes personalizados
+@import './partials/mixins';
+@import './partials/animations';
+@import './partials/typography';
+@import './partials/buttons';
+@import './partials/navbar';
+@import './partials/cards';
+@import './partials/forms';
+@import './partials/utilities';
+
+// 7. Estilos base
 body {
-  background-color: $light-color; /* Fondo claro */
-  margin: 0;
-  padding: 0;
+  font-family: $font-family-sans-serif;
+  color: $dark;
+  line-height: 1.6;
+  background-color: $light;
+  overflow-x: hidden;
 }
 
-@each $name, $color in $colors {
-  .bg-#{$name} {
-    background-color: #{$color};
-  }
+// 8. Encabezados
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-bottom: 1rem;
+  color: $primary;
+}
 
-  .text-#{$name} {
-    color: #{$color};
+// 9. Enlaces
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover, &:focus {
+    color: darken($primary, 10%);
+    text-decoration: none;
   }
 }
+
+// 10. Secciones
+.section {
+  padding: 5rem 0;
+  
+  &-title {
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: $primary;
+      margin: 1rem auto 0;
+    }
+  }
+}
+
+// 11. Animaciones
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+// 12. Utilidades
+.bg-gradient {
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+}
+
+.shadow-lg {
+  box-shadow: $box-shadow !important;
+}
+
+// 13. Media queries
+@include media-breakpoint-down(md) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+// 14. Importar estilos específicos de páginas
+@import './partials/home';
+@import './partials/nosotros';
+@import './partials/productos';
+@import './partials/contacto';
+@import './partials/testimonios';

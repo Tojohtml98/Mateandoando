@@ -1,15 +1,67 @@
-/* Variables de colores */
-$colors: (
-  primary: #3d8d7a, /* Color primario */
-  secondary: #a3d1c6, /* Color secundario */
-  light: #fbffe4, /* Color claro */
-  dark: #555 /* Color oscuro */
+// Colores base
+$primary: #2c6e49;  // Verde oscuro
+$secondary: #4c956c;  // Verde medio
+$success: #2ecc71;
+$info: #3498db;
+$warning: #f39c12;
+$danger: #e74c3c;
+$light: #f8f9fa;
+$dark: #2c3e50;
+
+// Tema personalizado
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
 );
-$white-color: #fff; /* Color blanco */
 
-/*Otras variables*/
-$primary-color: #3d8d7a;
-$secondary-color: #a3d1c6;
-$dark-color: #555; /* Color oscuro */
-$light-color: #fbffe4; /* Color claro */
+// Variables de diseño
+$border-radius: 0.5rem;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$transition: all 0.3s ease-in-out;
 
+// Tipografía
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-title: 'Oswald', sans-serif;
+$headings-font-family: $font-family-title;
+$headings-font-weight: 700;
+
+// Espaciado
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6
+);
+
+// Personalización de componentes
+$btn-border-radius: $border-radius;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1.5rem;
+$btn-font-weight: 500;
+
+// Navbar
+$navbar-padding-y: 1rem;
+$navbar-dark-color: rgba($light, 0.9);
+$navbar-dark-hover-color: $light;
+$navbar-dark-active-color: $light;
+$navbar-dark-toggler-border-color: transparent;
+
+// Cards
+$card-border-radius: $border-radius;
+$card-box-shadow: $box-shadow;
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
+
+// Transiciones
+$transition-base: all 0.3s ease-in-out;

@@ -1,0 +1,280 @@
+// Estilos para la barra de navegación
+.navbar {
+  padding: 1rem 0;
+  transition: all 0.3s ease-in-out;
+  background-color: $white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  
+  @include respond-to(lg) {
+    padding: 1.5rem 0;
+  }
+  
+  // Navbar brand (logo)
+  &-brand {
+    padding: 0;
+    margin: 0;
+    
+    img {
+      height: 50px;
+      width: auto;
+      transition: all 0.3s ease;
+      
+      @include respond-to(md) {
+        height: 60px;
+      }
+    }
+  }
+  
+  // Navbar toggler (botón móvil)
+  &-toggler {
+    border: none;
+    padding: 0.5rem;
+    border-radius: $border-radius;
+    
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    
+    &-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+  
+  // Contenedor de navegación
+  &-collapse {
+    @include respond-to(lg) {
+      flex-grow: 0;
+    }
+  }
+  
+  // Menú de navegación
+  .navbar-nav {
+    margin-top: 1rem;
+    
+    @include respond-to(lg) {
+      margin-top: 0;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin: 0.5rem 0;
+      position: relative;
+      
+      @include respond-to(lg) {
+        margin: 0 0.5rem;
+      }
+      
+      .nav-link {
+        color: $dark;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: $border-radius;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        @include respond-to(lg) {
+          padding: 0.5rem 1rem;
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $primary;
+          transition: all 0.3s ease;
+          opacity: 0;
+        }
+        
+        &:hover, 
+        &.active {
+          color: $primary;
+          
+          &::after {
+            width: 70%;
+            opacity: 1;
+          }
+        }
+        
+        &.btn-primary {
+          color: $white;
+          margin-top: 0.5rem;
+          
+          @include respond-to(lg) {
+            margin-top: 0;
+            margin-left: 0.5rem;
+          }
+          
+          &::after {
+            display: none;
+          }
+          
+          &:hover {
+            color: $white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($primary, 0.3);
+          }
+        }
+      }
+    }
+  }
+  
+  // Navbar scrolled (efecto al hacer scroll)
+  &.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba($white, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    
+    .navbar-brand {
+      img {
+        height: 40px;
+        
+        @include respond-to(md) {
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+// Estilos para el menú desplegable
+.dropdown {
+  &-menu {
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    border: 1px solid rgba($dark, 0.05);
+    
+    @include respond-to(lg) {
+      margin-top: 1rem;
+    }
+  }
+  
+  &-item {
+    padding: 0.5rem 1.5rem;
+    color: $dark;
+    transition: all 0.2s ease;
+    font-weight: 400;
+    
+    &:hover, 
+    &:focus, 
+    &.active {
+      background-color: rgba($primary, 0.1);
+      color: $primary;
+    }
+    
+    &.active {
+      font-weight: 500;
+    }
+  }
+  
+  &-toggle {
+    &::after {
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+      transition: transform 0.3s ease;
+    }
+    
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+// Estilos para la barra de búsqueda en la navegación
+.nav-search {
+  position: relative;
+  margin: 1rem 0;
+  
+  @include respond-to(lg) {
+    margin: 0 0 0 1.5rem;
+    max-width: 300px;
+  }
+  
+  &-input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border: 1px solid rgba($dark, 0.1);
+    border-radius: 50px;
+    background-color: rgba($light, 0.5);
+    transition: all 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary;
+      box-shadow: 0 0 0 0.25rem rgba($primary, 0.1);
+      background-color: $white;
+    }
+  }
+  
+  &-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $secondary;
+    pointer-events: none;
+  }
+}
+
+// Estilos para el carrito de compras en la navegación
+.nav-cart {
+  position: relative;
+  margin-left: 1rem;
+  
+  &-link {
+    display: flex;
+    align-items: center;
+    color: $dark;
+    text-decoration: none;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+  
+  &-icon {
+    font-size: 1.5rem;
+    position: relative;
+  }
+  
+  &-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: $danger;
+    color: $white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+  }
+  
+  &-text {
+    display: none;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    
+    @include respond-to(lg) {
+      display: inline;
+    }
+  }
+}

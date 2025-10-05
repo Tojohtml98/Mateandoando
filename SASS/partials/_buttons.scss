@@ -1,0 +1,425 @@
+// Estilos base para botones
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  border-radius: $btn-border-radius;
+  transition: $btn-transition;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  // Reset para botones en formularios
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  
+  // Efecto hover y focus
+  @include hover-focus() {
+    text-decoration: none;
+  }
+  
+  // Deshabilitado
+  &:disabled,
+  &.disabled {
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+    pointer-events: none;
+  }
+  
+  // Iconos dentro de botones
+  i, .icon {
+    margin-right: 0.5rem;
+    font-size: 1.1em;
+    line-height: 1;
+    vertical-align: middle;
+    
+    &.right {
+      margin-right: 0;
+      margin-left: 0.5rem;
+    }
+    
+    &.btn-icon {
+      margin: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  // Botón con solo icono
+  &.btn-icon-only {
+    width: $btn-height;
+    height: $btn-height;
+    padding: 0;
+    
+    i, .icon {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+  
+  // Efecto de elevación al pasar el cursor
+  &.btn-lift {
+    @extend .hover-lift;
+  }
+  
+  // Efecto de escala al pasar el cursor
+  &.btn-scale {
+    @extend .hover-scale;
+  }
+}
+
+// Tamaños de botones
+.btn {
+  // Botón grande
+  &-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    
+    &.btn-icon-only {
+      width: $btn-height-lg;
+      height: $btn-height-lg;
+      
+      i, .icon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  // Botón pequeño
+  &-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    
+    &.btn-icon-only {
+      width: $btn-height-sm;
+      height: $btn-height-sm;
+      
+      i, .icon {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  // Botón extra pequeño
+  &-xs {
+    @include button-size($btn-padding-y-sm * 0.75, $btn-padding-x-sm * 0.75, $btn-font-size-sm * 0.9, $btn-line-height-sm, $btn-border-radius-sm);
+    
+    &.btn-icon-only {
+      width: $btn-height-sm * 0.8;
+      height: $btn-height-sm * 0.8;
+      
+      i, .icon {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+// Variantes de botones
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    
+    // Efecto hover para botones claros
+    @if $color == "light" {
+      color: $dark;
+      
+      &:hover, 
+      &:focus, 
+      &:active {
+        color: $dark;
+        background-color: darken($value, 7.5%);
+        border-color: darken($value, 10%);
+      }
+    }
+    
+    // Efecto hover para botones oscuros
+    @if $color == "dark" {
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: lighten($value, 10%);
+        border-color: lighten($value, 12.5%);
+      }
+    }
+  }
+  
+  // Botones outline
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+    
+    // Efecto hover para botones outline
+    &:hover, 
+    &:focus, 
+    &:active {
+      color: color-contrast($value);
+      background-color: $value;
+      border-color: $value;
+    }
+    
+    // Efecto para botones outline deshabilitados
+    &:disabled, 
+    &.disabled {
+      color: $value;
+      background-color: transparent;
+    }
+  }
+  
+  // Botones con sombra
+  .btn-shadow-#{$color} {
+    @include button-variant($value, $value);
+    box-shadow: 0 4px 15px rgba($value, 0.3);
+    
+    &:hover, 
+    &:focus, 
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba($value, 0.4);
+    }
+    
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 15px rgba($value, 0.3);
+    }
+  }
+}
+
+// Botón con gradiente
+.btn-gradient {
+  @include gradient($primary, $secondary);
+  border: none;
+  color: $white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, $secondary, $primary);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover, 
+  &:focus, 
+  &:active {
+    color: $white;
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  // Variantes de gradiente
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @include gradient(lighten($value, 10%), darken($value, 10%));
+      
+      &::before {
+        @include gradient(darken($value, 10%), lighten($value, 10%));
+      }
+    }
+  }
+}
+
+// Botón con borde animado
+.btn-border-animate {
+  position: relative;
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  z-index: 1;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $primary;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  }
+  
+  &:hover, 
+  &:focus, 
+  &:active {
+    color: color-contrast($primary);
+    
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  
+  // Variantes de color
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      color: $value;
+      border-color: $value;
+      
+      &::after {
+        background: $value;
+      }
+      
+      &:hover, 
+      &:focus, 
+      &:active {
+        color: color-contrast($value);
+      }
+    }
+  }
+}
+
+// Botón con efecto de capa
+.btn-layer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($white, 0.2);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  }
+  
+  &:hover, 
+  &:focus, 
+  &:active {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  
+  // Variantes de color
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @include button-variant($value, $value);
+      
+      &::before {
+        background: rgba($white, 0.2);
+      }
+    }
+  }
+}
+
+// Grupo de botones
+.btn-group {
+  .btn {
+    margin-right: -1px;
+    
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+  
+  // Tamaños
+  &-lg {
+    .btn {
+      @extend .btn-lg;
+    }
+  }
+  
+  &-sm {
+    .btn {
+      @extend .btn-sm;
+    }
+  }
+  
+  &-xs {
+    .btn {
+      @extend .btn-xs;
+    }
+  }
+}
+
+// Botón de carga
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 50%;
+    left: 50%;
+    margin: -0.75rem 0 0 -0.75rem;
+    border: 2px solid rgba($white, 0.3);
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  // Variantes de color para el spinner
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color}::after {
+      border-color: rgba($white, 0.3);
+      border-top-color: color-contrast($value);
+    }
+    
+    &.btn-outline-#{$color}::after {
+      border-color: rgba($value, 0.3);
+      border-top-color: $value;
+    }
+  }
+}
+
+// Animación de giro
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

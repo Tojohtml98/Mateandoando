@@ -1,0 +1,108 @@
+// Mixin para transiciones suaves
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $property $duration $timing;
+}
+
+// Mixin para centrar elementos
+@mixin center($position: both) {
+  position: absolute;
+  
+  @if $position == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $position == 'horizontal' {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Mixin para crear botones
+@mixin button-variant($background, $color: color-contrast($background)) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid $background;
+  
+  &:hover, &:focus {
+    background-color: darken($background, 10%);
+    border-color: darken($background, 10%);
+    color: $color;
+  }
+  
+  &:disabled {
+    background-color: lighten($background, 15%);
+    border-color: lighten($background, 15%);
+    opacity: 0.7;
+  }
+}
+
+// Mixin para sombras
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+// Mixin para bordes redondeados
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+// Mixin para crear gradientes
+@mixin gradient($start-color, $end-color, $direction: to right) {
+  background: $start-color;
+  background: linear-gradient($direction, $start-color 0%, $end-color 100%);
+}
+
+// Mixin para responsive design
+@mixin respond-to($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint `#{$breakpoint}` no existe en el mapa `$grid-breakpoints`.";
+  }
+}
+
+// Mixin para crear tarjetas
+@mixin card($padding: $card-spacer-y $card-spacer-x) {
+  background: $white;
+  border: 1px solid rgba($dark, 0.1);
+  border-radius: $card-border-radius;
+  padding: $padding;
+  @include box-shadow($card-box-shadow);
+  @include transition();
+  
+  &:hover {
+    @include box-shadow(0 1rem 3rem rgba($dark, 0.175));
+    transform: translateY(-5px);
+  }
+}
+
+// Mixin para texto truncado
+@mixin text-truncate($lines: 1) {
+  @if $lines == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Mixin para crear un contenedor responsive
+@mixin container($max-width: 1200px, $padding: 0 1rem) {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding;
+  
+  @include respond-to(md) {
+    padding: 0 2rem;
+  }
+}
