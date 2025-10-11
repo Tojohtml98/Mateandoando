@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Bienvenido a Mateandoando, tu tienda de productos materos."
-    />
-    <meta
-      name="keywords"
-      content="mate, productos materos, accesorios de mate, tradición argentina"
-    />
-    <title>Home - Mateandoando</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Bienvenido a Mateandoando, tu tienda de productos materos.">
+    <meta name="keywords" content="mate, productos materos, accesorios de mate, tradición argentina">
+    <title>Mateandoando - Productos Materos de Calidad</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,471 +16,843 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/modern-styles.css" />
-  </head>
+    <link rel="stylesheet" href="css/custom-styles.css">
+</head>
 
-  <body>
+<body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <i class="fas fa-mug-hot text-primary me-2"></i>
-          <span class="fw-bold">Mateando</span>ando
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#inicio">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#productos">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#nosotros">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacto">Contacto</a>
-            </li>
-          </ul>
-          <div class="ms-lg-4 mt-3 mt-lg-0">
-            <a href="#" class="btn btn-primary">
-              <i class="fas fa-shopping-cart me-2"></i> Carrito
-            </a>
-          </div>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="navbar-brand">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Mateandoando</span>
+                </a>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link active">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#productos" class="nav-link">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#nosotros" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contacto" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link cart-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero" id="inicio">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h1 class="display-4 fw-bold mb-4">Los mejores mates y accesorios</h1>
-            <p class="lead mb-4">Descubre nuestra exclusiva colección de productos materos de la más alta calidad, seleccionados para los verdaderos amantes del mate.</p>
-            <div class="d-flex flex-column flex-sm-row gap-3">
-              <a href="#productos" class="btn btn-primary btn-lg px-4">
-                Ver productos
-              </a>
-              <a href="#nosotros" class="btn btn-outline-primary btn-lg px-4">
-                Conocenos
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 d-none d-lg-block">
-            <img src="https://images.unsplash.com/photo-1551649001-7a2482d98d09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                 alt="Mate y termo" class="img-fluid rounded-lg shadow">
-          </div>
-        </div>
-      </div>
     </header>
 
-    <!-- Sección de Categorías -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 text-center p-4">
-              <div class="card-body">
-                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                  <i class="fas fa-mug-hot fa-2x"></i>
-                </div>
-                <h3 class="h5 mb-3">Mates Premium</h3>
-                <p class="text-muted">Mates artesanales de la mejor calidad, seleccionados para los verdaderos amantes del mate.</p>
-                <a href="#" class="btn btn-link p-0 text-primary">Ver más <i class="fas fa-arrow-right ms-1"></i></a>
-              </div>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 text-center p-4">
-              <div class="card-body">
-                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                  <i class="fas fa-thermometer-full fa-2x"></i>
-                </div>
-                <h3 class="h5 mb-3">Termos y Mates</h3>
-                <p class="text-muted">Mantén tu mate a la temperatura perfecta con nuestros termos de alta calidad.</p>
-                <a href="#" class="btn btn-link p-0 text-primary">Ver más <i class="fas fa-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 text-center p-4">
-              <div class="card-body">
-                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                  <i class="fas fa-gift fa-2x"></i>
-                </div>
-                <h3 class="h5 mb-3">Kits de Regalo</h3>
-                <p class="text-muted">Sorprende a tus seres queridos con nuestros exclusivos kits de mate.</p>
-                <a href="#" class="btn btn-link p-0 text-primary">Ver más <i class="fas fa-arrow-right ms-1"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-title">
+                        <span class="title-line">Descubre la</span>
+                        <span class="title-line highlight">auténtica experiencia</span>
+                        <span class="title-line">del mate</span>
+                    </h1>
+                    <p class="hero-description">Productos artesanales seleccionados para los verdaderos amantes del mate. Calidad y tradición en cada pieza.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Clientes satisfechos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Productos vendidos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Calificación promedio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#productos" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-bag"></i>
+                        Ver Productos
+                    </a>
+                    <a href="#contacto" class="btn btn-outline btn-lg">
+                        <i class="fas fa-envelope"></i>
+                        Contacto
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Sección de Productos Destacados -->
-    <section class="py-5" id="productos">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="text-primary fw-bold">NUESTRA COLECCIÓN</span>
-          <h2 class="section-title">Productos Destacados</h2>
-          <p class="text-muted w-lg-50 mx-auto">Descubre nuestros productos más populares, seleccionados cuidadosamente para ofrecerte la mejor experiencia matera.</p>
-        </div>
-        
-        <div class="row g-4">
-          <!-- Producto 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card product-card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1587668178277-295251f354ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Mate Camionero">
-                <div class="product-actions">
-                  <button class="btn btn-sm btn-light rounded-circle me-2"><i class="far fa-heart"></i></button>
-                  <button class="btn btn-sm btn-primary rounded-pill">Agregar al carrito</button>
+    <!-- Sección de Destacados -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Calidad Premium</h3>
+                    <p>Productos seleccionados de los mejores artesanos.</p>
                 </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-primary bg-opacity-10 text-primary">Nuevo</span>
-                  <div class="text-warning">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Envíos a todo el país</h3>
+                    <p>Rápidos y seguros a todo el territorio nacional.</p>
                 </div>
-                <h3 class="h5 mb-1">Mate Camionero</h3>
-                <p class="text-muted small mb-2">Cuero y alpaca</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="h5 mb-0 text-primary">$8.999</span>
-                  <div class="btn-group">
-                    <button class="btn btn-sm btn-outline-secondary">-</button>
-                    <button class="btn btn-sm btn-outline-secondary px-3">1</button>
-                    <button class="btn btn-sm btn-outline-secondary">+</button>
-                  </div>
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="featured-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Atención personalizada</h3>
+                    <p>Asesoramiento experto en productos materos.</p>
                 </div>
-              </div>
             </div>
-          </div>
-          
-          <!-- Producto 2 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card product-card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1601583776480-009dc000cd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Termo Stanley">
-                <div class="product-actions">
-                  <button class="btn btn-sm btn-light rounded-circle me-2"><i class="far fa-heart"></i></button>
-                  <button class="btn btn-sm btn-primary rounded-pill">Agregar al carrito</button>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-danger bg-opacity-10 text-danger">Oferta</span>
-                  <div class="text-warning">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                  </div>
-                </div>
-                <h3 class="h5 mb-1">Termo Stanley</h3>
-                <p class="text-muted small mb-2">1L - 24hs de calor</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <span class="h5 mb-0 text-primary">$24.999</span>
-                    <small class="text-decoration-line-through text-muted ms-2">$29.999</small>
-                  </div>
-                  <div class="btn-group">
-                    <button class="btn btn-sm btn-outline-secondary">-</button>
-                    <button class="btn btn-sm btn-outline-secondary px-3">1</button>
-                    <button class="btn btn-sm btn-outline-secondary">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Más productos... -->
-          
         </div>
-        
-        <div class="text-center mt-5">
-          <a href="#" class="btn btn-outline-primary px-4">Ver todos los productos</a>
-        </div>
-      </div>
     </section>
 
-    <!-- Sección de Nosotros -->
-    <section class="py-5 bg-light" id="nosotros">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                 alt="Sobre nosotros" class="img-fluid rounded-lg shadow">
-          </div>
-          <div class="col-lg-6 ps-lg-5">
-            <span class="text-primary fw-bold">NUESTRA HISTORIA</span>
-            <h2 class="section-title">Sobre Nosotros</h2>
-            <p class="lead">Mateandoando nace de la pasión por el mate y la tradición argentina.</p>
-            <p>Somos un equipo de apasionados por el mate que busca acercarte los mejores productos para que disfrutes de esta infusión como se merece. Trabajamos directamente con artesanos y proveedores locales para ofrecerte productos de la más alta calidad.</p>
-            
-            <div class="row mt-4">
-              <div class="col-6 mb-4">
-                <div class="d-flex">
-                  <div class="me-3 text-primary">
-                    <i class="fas fa-check-circle fa-2x"></i>
-                  </div>
-                  <div>
-                    <h3 class="h5 mb-1">Calidad Premium</h3>
-                    <p class="text-muted small mb-0">Productos seleccionados</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 mb-4">
-                <div class="d-flex">
-                  <div class="me-3 text-primary">
-                    <i class="fas fa-truck fa-2x"></i>
-                  </div>
-                  <div>
-                    <h3 class="h5 mb-1">Envíos a todo el país</h3>
-                    <p class="text-muted small mb-0">Rápido y seguro</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="d-flex">
-                  <div class="me-3 text-primary">
-                    <i class="fas fa-headset fa-2x"></i>
-                  </div>
-                  <div>
-                    <h3 class="h5 mb-1">Soporte 24/7</h3>
-                    <p class="text-muted small mb-0">Estamos para ayudarte</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="d-flex">
-                  <div class="me-3 text-primary">
-                    <i class="fas fa-shield-alt fa-2x"></i>
-                  </div>
-                  <div>
-                    <h3 class="h5 mb-1">Pago seguro</h3>
-                    <p class="text-muted small mb-0">Protegemos tus datos</p>
-                  </div>
-                </div>
-              </div>
+    <!-- Productos -->
+    <section id="productos" class="products-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">NUESTRA COLECCIÓN</span>
+                <h2>Productos Destacados</h2>
+                <p>Descubre nuestra selección de productos premium para amantes del mate</p>
             </div>
             
-            <div class="mt-4">
-              <a href="#" class="btn btn-primary me-2">Conocé más</a>
-              <a href="#contacto" class="btn btn-outline-primary">Contactanos</a>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="producto-img-container">
+                        <img src="https://images.unsplash.com/photo-1513827366041-533d5e4abbb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mate Camionero" class="producto-img">
+                        <div class="producto-badge">Nuevo</div>
+                        <div class="producto-overlay">
+                            <button class="btn btn-icon-only btn-light quick-view" data-bs-toggle="modal" data-bs-target="#productModal" data-product="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-icon-only btn-light add-to-wishlist" data-product="1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Mate Camionero</h3>
+                        <p>Mate tradicional de madera con virola de acero inoxidable. Ideal para el uso diario.</p>
+                        <div class="producto-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(24)</span>
+                        </div>
+                        <div class="producto-footer">
+                            <div class="precio-container">
+                                <span class="precio">$8.999</span>
+                                <span class="precio-original">$11.999</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-to-cart" data-product="1" data-price="8999" data-name="Mate Camionero">
+                                <i class="fas fa-shopping-cart"></i>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="producto-card hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="producto-img-container">
+                        <img src="https://images.unsplash.com/photo-1601586124390-12b5e3e6d9d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Termo Stanley" class="producto-img">
+                        <div class="producto-overlay">
+                            <button class="btn btn-icon-only btn-light quick-view" data-bs-toggle="modal" data-bs-target="#productModal" data-product="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-icon-only btn-light add-to-wishlist" data-product="2">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Termo Stanley</h3>
+                        <p>Termo de acero inoxidable con capacidad para 1 litro. Mantiene la temperatura por 24 horas.</p>
+                        <div class="producto-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(18)</span>
+                        </div>
+                        <div class="producto-footer">
+                            <div class="precio-container">
+                                <span class="precio">$24.999</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-to-cart" data-product="2" data-price="24999" data-name="Termo Stanley">
+                                <i class="fas fa-shopping-cart"></i>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto-card hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <div class="producto-img-container">
+                        <img src="https://images.unsplash.com/photo-1606756790138-261d2b4260e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Bombilla Pico de Loro" class="producto-img">
+                        <div class="producto-badge">Más vendido</div>
+                        <div class="producto-overlay">
+                            <button class="btn btn-icon-only btn-light quick-view" data-bs-toggle="modal" data-bs-target="#productModal" data-product="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-icon-only btn-light add-to-wishlist" data-product="3">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Bombilla Pico de Loro</h3>
+                        <p>Bombilla de alpaca con filtro desmontable. No se tapa y es fácil de limpiar.</p>
+                        <div class="producto-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(32)</span>
+                        </div>
+                        <div class="producto-footer">
+                            <div class="precio-container">
+                                <span class="precio">$5.499</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-to-cart" data-product="3" data-price="5499" data-name="Bombilla Pico de Loro">
+                                <i class="fas fa-shopping-cart"></i>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card hover-scale" data-aos="fade-up" data-aos-delay="400">
+                    <div class="producto-img-container">
+                        <img src="https://images.unsplash.com/photo-1607203698381-3bd710128c54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Kit Matero Premium" class="producto-img">
+                        <div class="producto-overlay">
+                            <button class="btn btn-icon-only btn-light quick-view" data-bs-toggle="modal" data-bs-target="#productModal" data-product="4">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-icon-only btn-light add-to-wishlist" data-product="4">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Kit Matero Premium</h3>
+                        <p>Kit completo con mate, bombilla, yerbera y azucarera. Todo lo que necesitas en un solo lugar.</p>
+                        <div class="producto-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(15)</span>
+                        </div>
+                        <div class="producto-footer">
+                            <div class="precio-container">
+                                <span class="precio">$15.999</span>
+                                <span class="precio-original">$19.999</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm add-to-cart" data-product="4" data-price="15999" data-name="Kit Matero Premium">
+                                <i class="fas fa-shopping-cart"></i>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline">Ver todos los productos</a>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-subtitle">NUESTRA HISTORIA</span>
+                    <h2>Más que una tienda, una pasión por el mate</h2>
+                    <p>En Mateandoando nos apasiona todo lo relacionado con la cultura del mate. Desde nuestros inicios, nos hemos dedicado a seleccionar los mejores productos para ofrecer a nuestros clientes una experiencia única.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Calidad Garantizada</h4>
+                                <p>Trabajamos con los mejores proveedores para ofrecerte productos de primera calidad.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Envío Rápido</h4>
+                                <p>Despachamos tu pedido en menos de 24 horas hábiles.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Soporte Personalizado</h4>
+                                <p>Nuestro equipo está siempre disponible para asesorarte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sobre Nosotros" class="img-fluid">
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Testimonios -->
-    <section class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="text-primary fw-bold">OPINIONES</span>
-          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body p-4">
-                <div class="d-flex mb-3">
-                  <div class="text-warning me-2">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <span class="text-muted small">Hace 1 semana</span>
-                </div>
-                <p class="mb-4">"Excelente atención y productos de primera calidad. El envío llegó antes de lo esperado y todo impecable. ¡Volveré a comprar!"</p>
-                <div class="d-flex align-items-center">
-                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente" class="rounded-circle me-3" width="50" height="50">
-                  <div>
-                    <h6 class="mb-0">María González</h6>
-                    <small class="text-muted">Buenos Aires</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Más testimonios... -->
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <section class="py-5 bg-light" id="contacto">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="text-center mb-5">
-              <span class="text-primary fw-bold">CONTACTO</span>
-              <h2 class="section-title">Escribinos tu consulta</h2>
-              <p class="text-muted">Estamos para ayudarte. Responderemos a la brevedad.</p>
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">OPINIONES</span>
+                <h2>Lo que dicen nuestros clientes</h2>
             </div>
             
-            <div class="card border-0 shadow">
-              <div class="card-body p-4 p-md-5">
-                <form>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label for="name" class="form-label">Nombre completo</label>
-                      <input type="text" class="form-control form-control-lg" id="name" placeholder="Tu nombre">
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="col-md-6">
-                      <label for="email" class="form-label">Correo electrónico</label>
-                      <input type="email" class="form-control form-control-lg" id="email" placeholder="tucorreo@ejemplo.com">
+                    <p class="testimonial-text">"Excelente atención y productos de primera calidad. El envío llegó antes de lo esperado y todo impecable. ¡Volveré a comprar!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente">
+                        <div>
+                            <h4>María González</h4>
+                            <span>Buenos Aires</span>
+                        </div>
                     </div>
-                    <div class="col-12">
-                      <label for="subject" class="form-label">Asunto</label>
-                      <input type="text" class="form-control form-control-lg" id="subject" placeholder="¿En qué podemos ayudarte?">
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="col-12">
-                      <label for="message" class="form-label">Mensaje</label>
-                      <textarea class="form-control form-control-lg" id="message" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <p class="testimonial-text">"La calidad de los productos superó mis expectativas. El termo Stanley es increíble, mantiene el agua caliente por más de 24 horas."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente">
+                        <div>
+                            <h4>Juan Pérez</h4>
+                            <span>Córdoba</span>
+                        </div>
                     </div>
-                    <div class="col-12 text-center">
-                      <button type="submit" class="btn btn-primary btn-lg px-5">Enviar mensaje</button>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
-                  </div>
-                </form>
-              </div>
+                    <p class="testimonial-text">"Muy contento con mi compra. El kit matero es hermoso y llegó perfectamente embalado. Lo recomiendo 100%."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente">
+                        <div>
+                            <h4>Laura Martínez</h4>
+                            <span>Mendoza</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">CONTÁCTANOS</span>
+                    <h2>¿Tienes alguna consulta?</h2>
+                    <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. Siempreviva 742, CABA, Argentina</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+54 11 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hola@mateandoando.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Horario de atención</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
+                                <p>Sábados: 9:00 - 13:00 hs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="pedido">Seguimiento de pedido</option>
+                                <option value="devolucion">Devolución o cambio</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-content">
+                    <h3>¡Suscríbete a nuestro newsletter!</h3>
+                    <p>Recibe ofertas exclusivas y novedades sobre nuestros productos.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu dirección de email" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <a class="navbar-brand text-white mb-3 d-inline-block" href="#">
-              <i class="fas fa-mug-hot me-2"></i>
-              <span class="fw-bold">Mateando</span>ando
-            </a>
-            <p class="text-white-50 mb-4">Tu tienda de confianza para todos los productos relacionados con el mate. Calidad y tradición en cada producto.</p>
-            <div class="social-links">
-              <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="me-2"><i class="fab fa-whatsapp"></i></a>
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Mateandoando</span>
+                    </a>
+                    <p>Tu tienda de confianza para todos los productos relacionados con el mate. Calidad y tradición en cada producto.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categorías</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mates</a></li>
+                        <li><a href="#">Termos</a></li>
+                        <li><a href="#">Bombillas</a></li>
+                        <li><a href="#">Yerberas</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                        <li><a href="#">Kits de Regalo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Siempreviva 742, CABA, Argentina</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+54 11 1234-5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>hola@mateandoando.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4">
-            <h5 class="text-white mb-4">Enlaces rápidos</h5>
-            <ul class="footer-links">
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#productos">Productos</a></li>
-              <li><a href="#nosotros">Nosotros</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <h5 class="text-white mb-4">Categorías</h5>
-            <ul class="footer-links">
-              <li><a href="#">Mates</a></li>
-              <li><a href="#">Termos</a></li>
-              <li><a href="#">Bombillas</a></li>
-              <li><a href="#">Yerberos</a></li>
-              <li><a href="#">Accesorios</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <h5 class="text-white mb-4">Contacto</h5>
-            <ul class="footer-links">
-              <li class="mb-2">
-                <i class="fas fa-map-marker-alt me-2 text-primary"></i> 
-                <span class="text-white-50">Av. Siempreviva 742, CABA</span>
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-phone-alt me-2 text-primary"></i> 
-                <a href="tel:+541112345678" class="text-white-50">+54 11 1234-5678</a>
-              </li>
-              <li class="mb-2">
-                <i class="far fa-envelope me-2 text-primary"></i> 
-                <a href="mailto:hola@mateandoando.com" class="text-white-50">hola@mateandoando.com</a>
-              </li>
-              <li class="mb-2">
-                <i class="far fa-clock me-2 text-primary"></i> 
-                <span class="text-white-50">Lun-Vie: 9:00 - 18:00</span>
-              </li>
-            </ul>
-          </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-payment">
+                    <span>Aceptamos:</span>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2023 Mateandoando. Todos los derechos reservados.</p>
+            </div>
         </div>
-        <hr class="my-4 bg-white-10">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0 text-white-50 small">&copy; 2023 Mateandoando. Todos los derechos reservados.</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <img src="https://www.mercadopago.com/org-img/MP3/API/logos/mercadopago.png" alt="Métodos de pago" height="30" class="me-2">
-            <img src="https://www.mercadopago.com/org-img/MP3/API/logos/mercadopago.png" alt="Métodos de pago" height="30">
-          </div>
-        </div>
-      </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5491112345678" class="whatsapp-float" target="_blank">
-      <i class="fab fa-whatsapp"></i>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/541112345678" class="whatsapp-button" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Botón de volver arriba -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal de Producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalle del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-modal-image">
+                                <img src="" alt="" class="img-fluid" id="modalProductImage">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-modal-info">
+                                <h4 id="modalProductName"></h4>
+                                <div class="product-rating mb-3">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(24)</span>
+                                </div>
+                                <div class="price-container mb-3">
+                                    <span class="precio" id="modalProductPrice"></span>
+                                    <span class="precio-original" id="modalProductOriginalPrice"></span>
+                                </div>
+                                <p id="modalProductDescription"></p>
+                                <div class="quantity-selector mb-3">
+                                    <label>Cantidad:</label>
+                                    <div class="input-group" style="max-width: 150px;">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(-1)">-</button>
+                                        <input type="number" class="form-control text-center" value="1" min="1" id="quantityInput">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-lg w-100 add-to-cart-modal">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Agregar al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast para notificaciones -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong class="me-auto">Producto Agregado</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                El producto se ha agregado al carrito exitosamente.
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
     <script>
-      // Navbar scroll effect
-      window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
-      
-      // Smooth scroll para enlaces internos
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
+        // Inicializar AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
         });
-      });
+
+        // Carrito de compras
+        let cart = [];
+        let cartCount = 0;
+
+        // Actualizar contador del carrito
+        function updateCartCount() {
+            const cartCountElement = document.querySelector('.cart-count');
+            cartCountElement.textContent = cartCount;
+            
+            if (cartCount > 0) {
+                cartCountElement.style.display = 'inline-block';
+            } else {
+                cartCountElement.style.display = 'none';
+            }
+        }
+
+        // Agregar producto al carrito
+        function addToCart(productId, productName, price, quantity = 1) {
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: price,
+                    quantity: quantity
+                });
+            }
+            
+            cartCount += quantity;
+            updateCartCount();
+            showToast();
+        }
+
+        // Mostrar toast de notificación
+        function showToast() {
+            const toast = new bootstrap.Toast(document.getElementById('cartToast'));
+            toast.show();
+        }
+
+        // Cambiar cantidad en modal
+        function changeQuantity(change) {
+            const input = document.getElementById('quantityInput');
+            const newValue = parseInt(input.value) + change;
+            if (newValue >= 1) {
+                input.value = newValue;
+            }
+        }
+
+        // Event listeners para botones de agregar al carrito
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botones de agregar al carrito
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.dataset.product;
+                    const productName = this.dataset.name;
+                    const price = parseInt(this.dataset.price);
+                    
+                    addToCart(productId, productName, price);
+                    
+                    // Efecto visual
+                    this.innerHTML = '<i class="fas fa-check"></i> Agregado';
+                    this.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-shopping-cart"></i> Agregar';
+                        this.classList.remove('btn-success');
+                    }, 2000);
+                });
+            });
+
+            // Botones de agregar al carrito en modal
+            document.querySelector('.add-to-cart-modal').addEventListener('click', function() {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+                const quantity = parseInt(document.getElementById('quantityInput').value);
+                
+                // Aquí deberías obtener los datos del producto desde el modal
+                // Por simplicidad, usaré datos hardcodeados
+                addToCart('modal-product', 'Producto del Modal', 8999, quantity);
+                modal.hide();
+            });
+
+            // Botones de wishlist
+            document.querySelectorAll('.add-to-wishlist').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    if (this.classList.contains('active')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        icon.style.color = '#e74c3c';
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        icon.style.color = '';
+                    }
+                });
+            });
+        });
+
+        // Botón de volver arriba
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Formulario de contacto
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Aquí iría el código para enviar el formulario
+                alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+                this.reset();
+            });
+        }
+
+        // Newsletter
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (email) {
+                    alert('¡Gracias por suscribirte! Te enviaremos nuestras ofertas especiales.');
+                    this.reset();
+                }
+            });
+        }
     </script>
-  </body>
+</body>
 </html>
